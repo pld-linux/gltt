@@ -17,6 +17,12 @@ any OpenGL application.
 It supports bitmapped and anti-aliased font drawing as well as                
 vectorized and polygonized drawing.                                           
 
+%description -l pl
+Gltt jest bibliotek± pozwalajac± odczytywaæ i rysowaæ czcionki True Type
+w aplikacjach OpenGL. Obs³uguje bitmapowe i wyg³adzane rysowanie fontów,
+jak równie¿ rysowanie wektoryzowane i wieloboczne.
+
+
 %package devel
 Summary:   	Header files for gltt
 Group:     	Development/Libraries
