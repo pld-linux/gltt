@@ -66,18 +66,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %attr(644,root ,root) %{_libdir}/lib*.a
-
-%changelog
-* Sun Sep  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.3-1]
-- added static subpackage,
-- changed permission on shared libraries to 755.
-
-* Sun Jun 14 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.2-1]
-- fixed typo in %defattr macro.
-
-* Wed May  5 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.0-1]
-- first release in rpm package,
-- spec file contains construction wihch understand rpm >= 2.4.99.
