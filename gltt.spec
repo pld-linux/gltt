@@ -60,8 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644, root ,root, 755)
-%dir /usr/include/gltt
-/usr/include/gltt/*
+%dir %{_includedir}/gltt
+%{_includedir}/gltt/*
 %{_libdir}/lib*.so
 
 %files static
