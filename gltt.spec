@@ -7,7 +7,7 @@ Group:     	Libraries
 Group(pl):	Biblioteki
 Source:    	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
 URL:       	http://home.worldnet.fr/~rehel/gltt/gltt.html
-BuildPrereq:	Mesa-devel
+BuildRequires:	Mesa-devel
 Requires:  	Mesa >= 2.6
 BuildRoot:	/tmp/%{name}-%{version}-root
 
