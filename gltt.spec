@@ -47,7 +47,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT/usr install
 
-strip $RPM_BUILD_ROOT/usr/lib/lib*.so.*.*
+strip $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -56,16 +56,16 @@ strip $RPM_BUILD_ROOT/usr/lib/lib*.so.*.*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755, root ,root) /usr/lib/lib*.so.*.*
+%attr(755, root ,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644, root ,root, 755)
 %dir /usr/include/gltt
 /usr/include/gltt/*
-/usr/lib/lib*.so
+%{_libdir}/lib*.so
 
 %files static
-%attr(644, root ,root) /usr/lib/lib*.a
+%attr(644, root ,root) %{_libdir}/lib*.a
 
 %changelog
 * Sun Sep  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
