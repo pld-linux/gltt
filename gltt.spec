@@ -55,20 +55,21 @@ Statyczna biblioteka gltt.
 %patch0 -p1
 
 %build
-CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix}
+%configure2_13
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
-
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%{__make} install \
+	libdir=$RPM_BUILD_ROOT%{_libdir} \
+	includedir=$RPM_BUILD_ROOT%{_includedir}/gltt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
