@@ -56,16 +56,16 @@ strip $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755, root ,root) %{_libdir}/lib*.so.*.*
+%attr(755,root ,root) %{_libdir}/lib*.so.*.*
 
 %files devel
-%defattr(644, root ,root, 755)
+%defattr(644,root ,root,755)
 %dir %{_includedir}/gltt
 %{_includedir}/gltt/*
 %{_libdir}/lib*.so
 
 %files static
-%attr(644, root ,root) %{_libdir}/lib*.a
+%attr(644,root ,root) %{_libdir}/lib*.a
 
 %changelog
 * Sun Sep  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
