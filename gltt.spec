@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
+# Source0-md5:	2d367294d6efa943f9287fe88089af76
 Patch0:		%{name}-cpp.patch
 URL:		http://home.worldnet.fr/~rehel/gltt/gltt.html
 BuildRequires:	OpenGL-devel
