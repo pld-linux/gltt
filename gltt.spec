@@ -8,9 +8,11 @@ Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
 URL:		http://home.worldnet.fr/~rehel/gltt/gltt.html
-BuildRequires:	Mesa-devel
-Requires:	Mesa >= 2.6
+BuildRequires:	OpenGL-devel
+Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 Gltt is a library that allows you to read and draw TrueType fonts in
