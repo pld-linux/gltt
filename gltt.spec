@@ -1,6 +1,6 @@
 Summary:   	Gltt - library that allows use TrueType fonts in OpenGL application
 Name:      	gltt
-Version:   	2.3
+Version:   	2.4
 Release:   	1
 Copyright: 	LGPL
 Group:     	Libraries
