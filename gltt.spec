@@ -9,7 +9,7 @@ Source:    	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
 URL:       	http://home.worldnet.fr/~rehel/gltt/gltt.html
 BuildPrereq:	Mesa-devel
 Requires:  	Mesa >= 2.6
-BuildRoot: 	/tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 Gltt is a library that allows you to read and draw TrueType fonts in          
