@@ -9,7 +9,7 @@ Source:    	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
 URL:       	http://home.worldnet.fr/~rehel/gltt/gltt.html
 BuildRequires:	Mesa-devel
 Requires:  	Mesa >= 2.6
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Gltt is a library that allows you to read and draw TrueType fonts in          
@@ -21,7 +21,6 @@ vectorized and polygonized drawing.
 Gltt jest bibliotek± pozwalajac± odczytywaæ i rysowaæ czcionki True Type
 w aplikacjach OpenGL. Obs³uguje bitmapowe i wyg³adzane rysowanie fontów,
 jak równie¿ rysowanie wektoryzowane i wieloboczne.
-
 
 %package devel
 Summary:   	Header files for gltt
