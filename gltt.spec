@@ -1,9 +1,12 @@
-Summary:	Gltt - library that allows use TrueType fonts in OpenGL application
+Summary:	gltt - library that allows use TrueType fonts in OpenGL application
+Summary(pl):	gltt - biblioteka pozwalaj±ca na u¿ycie fontów TrueType w aplikacjach OpenGL
 Name:		gltt
 Version:	2.4
 Release:	1
 License:	LGPL
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
@@ -26,28 +29,41 @@ fontów, jak równie¿ rysowanie wektoryzowane i wieloboczne.
 
 %package devel
 Summary:	Header files for gltt
+Summary(pl):	Pliki nag³ówkowe gltt
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
 This package contains the gltt header files required to develop
 gltt-based applications.
 
+%description devel -l pl
+Pliki nag³ówkowe potrzebne do kompilacji programów korzystaj±cych z
+gltt.
+
 %package static
-Summary:	gltt - static library and header files
+Summary:	gltt - static library
+Summary(pl):	Biblioteka statyczna gltt
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
 This package contains the gltt static libraries.
 
+%description static -l pl
+Statyczna biblioteka gltt.
+
 %prep
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
+CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" \
 ./configure %{_target_platform} \
 	--prefix=%{_prefix}
 %{__make}
@@ -55,8 +71,6 @@ CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
-
-strip $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
