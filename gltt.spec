@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
+Patch0:		%{name}-cpp.patch
 URL:		http://home.worldnet.fr/~rehel/gltt/gltt.html
 BuildRequires:	OpenGL-devel
 Requires:	OpenGL
@@ -51,6 +52,7 @@ Statyczna biblioteka gltt.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" \
@@ -75,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/gltt
 
 %files static
