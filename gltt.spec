@@ -52,7 +52,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 strip $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
