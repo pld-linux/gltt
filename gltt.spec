@@ -1,13 +1,15 @@
-Summary:   Gltt - library that allows use TrueType fonts in OpenGL application
-Name:      gltt
-Version:   2.3
-Release:   1
-Copyright: LGPL
-Group:     Development/Version Control
-Source:    http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
-URL:       http://home.worldnet.fr/~rehel/gltt/gltt.html
-Requires:  Mesa >= 2.6
-BuildRoot: /tmp/%{name}-%{version}-root
+Summary:   	Gltt - library that allows use TrueType fonts in OpenGL application
+Name:      	gltt
+Version:   	2.3
+Release:   	1
+Copyright: 	LGPL
+Group:     	Libraries
+Group(pl):	Biblioteki
+Source:    	http://home.worldnet.fr/~rehel/gltt/%{name}-%{version}.tar.gz
+URL:       	http://home.worldnet.fr/~rehel/gltt/gltt.html
+BuildPrereq:	Mesa-devel
+Requires:  	Mesa >= 2.6
+BuildRoot: 	/tmp/%{name}-%{version}-root
 
 %description
 Gltt is a library that allows you to read and draw TrueType fonts in          
@@ -16,18 +18,18 @@ It supports bitmapped and anti-aliased font drawing as well as
 vectorized and polygonized drawing.                                           
 
 %package devel
-Summary:   Header files for gltt
-Group:     Development/Libraries
-Requires:  %{name} = %{version}
+Summary:   	Header files for gltt
+Group:     	Development/Libraries
+Requires:  	%{name} = %{version}
 
 %description devel
 This package contains the gltt header files required to develop gltt-based
 applications.
 
 %package static
-Summary:   gltt - static library and header files
-Group:     Development/Libraries
-Requires:  %{name}-devel = %{version}
+Summary:   	gltt - static library and header files
+Group:     	Development/Libraries
+Requires:  	%{name}-devel = %{version}
 
 %description static
 This package contains the gltt static libraries.
@@ -36,7 +38,9 @@ This package contains the gltt static libraries.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr
+CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
+./configure %{_target} \
+	--prefix=/usr
 make
 
 %install
