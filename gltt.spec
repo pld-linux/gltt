@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/lib*.so
 
 %files static
-/usr/lib/lib*.a
+%attr(644, root ,root) /usr/lib/lib*.a
 
 %changelog
 * Sun Sep  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
