@@ -1,0 +1,2 @@
+- added cpp patch (for proper building with gcc-3.2)
+- fixed %files
