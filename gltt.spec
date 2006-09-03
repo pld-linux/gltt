@@ -29,7 +29,7 @@ fontów, jak równie¿ rysowanie wektoryzowane i wieloboczne.
 Summary:	Header files for gltt
 Summary(pl):	Pliki nag³ówkowe gltt
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This package contains the gltt header files required to develop
@@ -43,7 +43,7 @@ gltt.
 Summary:	gltt - static library
 Summary(pl):	Biblioteka statyczna gltt
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains the gltt static libraries.
