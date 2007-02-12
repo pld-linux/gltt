@@ -1,5 +1,5 @@
 Summary:	gltt - library that allows use TrueType fonts in OpenGL application
-Summary(pl):	gltt - biblioteka pozwalaj±ca na u¿ycie fontów TrueType w aplikacjach OpenGL
+Summary(pl.UTF-8):   gltt - biblioteka pozwalajÄ…ca na uÅ¼ycie fontÃ³w TrueType w aplikacjach OpenGL
 Name:		gltt
 Version:	2.4
 Release:	1
@@ -20,14 +20,14 @@ Gltt is a library that allows you to read and draw TrueType fonts in
 any OpenGL application. It supports bitmapped and anti-aliased font
 drawing as well as vectorized and polygonized drawing.
 
-%description -l pl
-Gltt jest bibliotek± pozwalaj±c± odczytywaæ i rysowaæ czcionki True
-Type w aplikacjach OpenGL. Obs³uguje bitmapowe i wyg³adzane rysowanie
-fontów, jak równie¿ rysowanie wektoryzowane i wieloboczne.
+%description -l pl.UTF-8
+Gltt jest bibliotekÄ… pozwalajÄ…cÄ… odczytywaÄ‡ i rysowaÄ‡ czcionki True
+Type w aplikacjach OpenGL. ObsÅ‚uguje bitmapowe i wygÅ‚adzane rysowanie
+fontÃ³w, jak rÃ³wnieÅ¼ rysowanie wektoryzowane i wieloboczne.
 
 %package devel
 Summary:	Header files for gltt
-Summary(pl):	Pliki nag³ówkowe gltt
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe gltt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -35,20 +35,20 @@ Requires:	%{name} = %{version}-%{release}
 This package contains the gltt header files required to develop
 gltt-based applications.
 
-%description devel -l pl
-Pliki nag³ówkowe potrzebne do kompilacji programów korzystaj±cych z
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe potrzebne do kompilacji programÃ³w korzystajÄ…cych z
 gltt.
 
 %package static
 Summary:	gltt - static library
-Summary(pl):	Biblioteka statyczna gltt
+Summary(pl.UTF-8):   Biblioteka statyczna gltt
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains the gltt static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gltt.
 
 %prep
