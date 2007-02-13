@@ -1,5 +1,5 @@
 Summary:	gltt - library that allows use TrueType fonts in OpenGL application
-Summary(pl.UTF-8):   gltt - biblioteka pozwalająca na użycie fontów TrueType w aplikacjach OpenGL
+Summary(pl.UTF-8):	gltt - biblioteka pozwalająca na użycie fontów TrueType w aplikacjach OpenGL
 Name:		gltt
 Version:	2.4
 Release:	1
@@ -27,7 +27,7 @@ fontów, jak również rysowanie wektoryzowane i wieloboczne.
 
 %package devel
 Summary:	Header files for gltt
-Summary(pl.UTF-8):   Pliki nagłówkowe gltt
+Summary(pl.UTF-8):	Pliki nagłówkowe gltt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -41,7 +41,7 @@ gltt.
 
 %package static
 Summary:	gltt - static library
-Summary(pl.UTF-8):   Biblioteka statyczna gltt
+Summary(pl.UTF-8):	Biblioteka statyczna gltt
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
